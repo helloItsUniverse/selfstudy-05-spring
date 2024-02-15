@@ -16,10 +16,12 @@ public class MemberService {
 
     /* 필기. 여기가 primary concern (주요 관심사) */
     public List<MemberDTO> findAllMembers() {
+        System.out.println("target -> findAllMembers 실행");
         return memberDAO.selectAllMembers();
     }
 
-    public MemberDTO findMemberBy(long id) {
-        return memberDAO.selectMemberBy(id);
+    public MemberDTO findMemberBy(int index) {
+        System.out.println("target -> findMemberBy 실행");
+        return memberDAO.selectMemberBy(index);
     }
 }
